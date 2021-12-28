@@ -1,11 +1,8 @@
-# modules
-
-puts Class.superclass
-# Module 
 # Class is a subclass of Module
+puts Class.superclass
 
 module Walking
-  def walk  
+  def walk
     puts 'It walks!'
   end
 end

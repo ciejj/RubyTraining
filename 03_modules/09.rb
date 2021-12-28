@@ -1,19 +1,24 @@
-# super- jump up to the next definition in method-lookup
+# using super in initialize
 
-module Walking
-  def talk
-    puts 'I am animal, that walks'
+class Animal
+  attr_reader :legs, :eyes
+
+  def initialize(legs = 4)
+    @legs = legs
+    @eyes = 2
   end
 end
 
-class Penguin
-  include Walking
-  def talk
-    puts 'Pingu says:'
+class Spider < Animal
+  def initialize(legs)
     super
-    puts 'and swims'
+    @eyes = 16
+  end
+
+  def info
+    puts "I am spider with #{legs} legs, and #{eyes} eyes"
   end
 end
 
-pingu = Penguin.new
-pingu.talk
+spider = Spider.new(8)
+spider.info

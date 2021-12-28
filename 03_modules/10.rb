@@ -1,23 +1,21 @@
-# super- jump up to the next definition in method-lookup
-
-class Animal
-  attr_reader :legs, :eyes
-  def initialize(legs=4)
-    @legs = legs
-    @eyes = 2
+# extending module
+module Walking
+  def walking
+    puts 'It walks!'
   end
 end
 
-class Spider < Animal
-  def initialize(legs)
-    super
-    @eyes = 16
-  end
-
-  def info
-    puts "I am spider with #{legs} legs, and #{eyes} eyes"
+module Flying
+  def flying
+    puts 'It flies!'
   end
 end
 
-spider = Spider.new(8)
-spider.info
+class Moving
+  extend Walking
+  extend Flying
+end
+
+# methods from extended modules are added as class methods
+Moving.walking
+Moving.flying

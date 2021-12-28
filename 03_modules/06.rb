@@ -1,45 +1,35 @@
-# method-lookup with modules
-
+# prepend vs include
+# there are 3 modules, which implement the 'move' method
 module Walking
-  def move  
+  def move
     puts 'It walks!'
   end
 end
 
-module Flying 
+module Flying
   def move
     puts 'It flies!'
   end
 end
 
-# modules can't be instanciated
+# class implementing 'move' method, and prepeding a module
 class Penguin
-  include Walking
+  prepend Walking
   def move
     puts 'It swims!'
   end
 end
 
+# class prepending two modules
 class Sparrow
- include Walking
- include Flying
+  prepend Walking
+  prepend Flying
 end
 
-class Hawk
-  include Walking
-  include Flying
-  include Walking
-end
-
-# class methods are picked first
+# methods from prepended modules are picked first
 pingu = Penguin.new
 pingu.move
 
-# most recent mixed-in module.
+# most recent mixed-in module
 jack = Sparrow.new
 jack.move
-
-# Walking is already included, so despite the fact it is the most recent one
-# move method will be picked from Flying module
-tony = Hawk.new
-tony.move

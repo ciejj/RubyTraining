@@ -1,5 +1,5 @@
 module Walking
-  def walk  
+  def walk
     puts 'It walks!'
   end
 end
@@ -10,6 +10,7 @@ module Swimming
   end
 end
 
+# class can include multiple modules
 class Penguin
   include Walking
   include Swimming

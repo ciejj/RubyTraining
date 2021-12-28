@@ -1,22 +1,19 @@
-# method-lookup with modules
+# super- jump up to the next definition in method-lookup
 
-module Walking
-  def move  
-    puts 'It walks!'
+module Talking
+  def talk
+    puts 'I am animal, that walks'
   end
 end
 
-class Bird
-  def move
-    puts 'It does not move!'
+class Penguin
+  include Talking
+  def talk
+    puts 'Pingu says:'
+    super
+    puts 'and swims'
   end
 end
 
-# modules can't be instanciated
-class Penguin < Bird
-  include Walking
-end
-
-# included modules come before inheritance
 pingu = Penguin.new
-pingu.move
+pingu.talk

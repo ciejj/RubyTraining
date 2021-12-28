@@ -1,34 +1,20 @@
-# prepend vs include
-
 module Walking
-  def move  
+  def move
     puts 'It walks!'
   end
 end
 
-module Flying 
+class Bird
   def move
-    puts 'It flies!'
+    puts 'It flies'
   end
 end
 
-class Penguin
-  prepend Walking
-  def move
-    puts 'It swims!'
-  end
+# modules can't be instanciated
+class Penguin < Bird
+  include Walking
 end
 
-class Sparrow
-  prepend Walking
-  prepend Flying
- end
-
-
-# methods from prepended modules are picked first
+# included modules come before inheritance
 pingu = Penguin.new
 pingu.move
-
-# most recent mixed-in module.
-jack = Sparrow.new
-jack.move

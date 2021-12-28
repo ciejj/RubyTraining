@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Hello
   def self.greetings
     puts "Greetings from class with id: #{object_id}"

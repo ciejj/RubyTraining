@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Movie
   @@no_of_movies = 0
 

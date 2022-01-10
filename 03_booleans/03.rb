@@ -14,5 +14,6 @@ puts my_arr[5]
 
 puts "nil.to_s: #{nil.to_s}"
 puts "nil.to_i: #{nil.to_i}"
+puts "nil.nil?: #{nil.nil?}"
 
 puts "nil.object_id: #{nil.object_id}"

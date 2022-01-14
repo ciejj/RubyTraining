@@ -1,33 +1,22 @@
-# comparable module - to ge family of comparison methods: == != > < >= <=
-# mix a module 'Comparable'
-# define <=> method
+# case equality operator ===
+# this operator is used to determine if when clase is matched
+# the result of the following comparisons is exactly the same
 
-class Dog
-  include Comparable
-  attr_accessor :name
+answer = 'yes'
 
-  def initialize(name)
-    @name = name
-  end
-
-  def <=>(other)
-    if name.length < other.name.length
-      -1
-    elsif name.length > other.name.length
-      1
-    else
-      0
-    end
-  end
+if 'yes' === answer
+  puts 'YEAH'
+elsif 'no' === answer
+  puts 'NAH'
+else
+  puts 'DUNNO'
 end
 
-pluto = Dog.new('Pluto')
-lessie = Dog.new('Lessie')
-bandit = Dog.new('Bandit')
-
-puts "pluto > lessie: #{pluto > lessie}"
-puts "pluto >= lessie: #{pluto >= lessie}"
-puts "pluto < lessie: #{pluto < lessie}"
-puts "plut <= lessie: #{pluto <= lessie}"
-puts "bandit == lessie: #{bandit == lessie}"
-puts "bandit != lessie: #{bandit != lessie}"
+case answer
+when 'yes'
+  puts 'YEAH'
+when 'no'
+  puts 'NAH'
+else
+  puts 'DUNNO'
+end

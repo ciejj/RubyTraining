@@ -11,7 +11,7 @@ puts "n = 1 evaluates to: #{n=1}, and it's boolean value is: #{!!(n=1)}"
 
 puts "def empty_method;end evaluates to: #{def empty_method; end}, and it's boolean value is: #{!!(def empty_method; end)}"
 
-puts "true evaluates to: #{false}, and it's boolean value is: #{!!false}"
+puts "false evaluates to: #{false}, and it's boolean value is: #{!!false}"
 puts "'puts 1' evaluates to: #{puts 1}, and it's boolean value is: #{!!(puts 1)}"
 puts "'class EmptyClass;end' evaluates to: #{class EmptyClass;end}, and it's boolean value is: #{!!(class EmptyClass;end)}"
 

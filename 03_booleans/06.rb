@@ -1,41 +1,19 @@
 # equality tests
+# there are 5 equality operators in ruby: ==, !=, ===, eql?, equal? 
 
-class Cat
-end
+object_1 = Object.new
+object_2 = Object.new
 
-felix = Cat.new
-tom = Cat.new
+# their basic implementation does exactly the same thing
 
-puts "felix == felix: #{felix == felix}"
-puts "felix.eql?(felix): #{felix.eql?(felix)}"
-puts "felix.equal?(felix): #{felix.equal?(felix)}"
-puts "felix === felix: #{felix === felix}"
+puts "object_1 == object_1: #{object_1 == object_1}"
+puts "object_1 != object_1: #{object_1 != object_1}"
+puts "object_1.eql?(object_1): #{object_1.eql?(object_1)}"
+puts "object_1.equal?(object_1): #{object_1.equal?(object_1)}"
+puts "object_1 === object_1: #{object_1 === object_1}"
 
-puts "felix == tom: #{felix == tom}"
-puts "felix.eql?(tom): #{felix.eql?(tom)}"
-puts "felix.equal?(tom): #{felix.equal?(tom)}"
-puts "felix === tom: #{felix === tom}"
-
-class Dog
-  attr_accessor :name, :breed
-
-  def initialize(name, breed)
-    @name = name
-    @breed = breed
-  end
-
-  def eql?(other)
-    other.name == name && other.breed == breed
-  end
-
-  def ==(other)
-    other.name == name
-  end
-end
-
-dog1 = Dog.new('Bandit', 'Bulldog')
-dog2 = Dog.new('Bandit', 'Wolf')
-
-puts "dog1 == dog2: #{dog1 == dog2}"
-puts "dog1.eql?(dog2): #{dog1.eql?(dog2)}"
-puts "dog1.equal?(dog2): #{dog1.equal?(dog2)}"
+puts "object_1 == object_2: #{object_1 == object_2}"
+puts "object_1 != object_2: #{object_1 != object_2}"
+puts "object_1.eql?(object_2): #{object_1.eql?(object_2)}"
+puts "object_1.equal?(object_2): #{object_1.equal?(object_2)}"
+puts "object_1 === object_2: #{object_1 === object_2}"

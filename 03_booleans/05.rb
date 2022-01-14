@@ -1,16 +1,13 @@
-# logical operators - !
+# logical operators - negation - !
 
-value1 = true 
-puts "  value1: #{value1}"
-puts " !value1: #{!value1}"
-puts "!!value1: #{!!value1}"
+# negation operator flips the boolean value of the expression after it
+puts "!true: #{!true}"
+puts "!false: #{!false}"
+puts "!'a string': #{!'a string'}"
+puts "!nil: #{!nil}"
 
-value2 = 'a non empty string'
-puts "  value2: #{value2}"
-puts " !value2: #{!value2}"
-puts "!!value2: #{!!value2}"
-
-value3 = nil
-puts " value3: #{value3}"
-puts "!value3: #{!value3}"
-puts "!!value3: #{!!value3}"
+# double negation -  maps the expression to its boolean value
+puts "!!true: #{!!true}"
+puts "!!false: #{!!false}"
+puts "!!'a string': #{!!'a string'}"
+puts "!!nil: #{!!nil}"

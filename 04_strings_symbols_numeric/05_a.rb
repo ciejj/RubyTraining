@@ -14,5 +14,5 @@ name = 'John'
 puts "string frozen?: #{name.frozen?}"
 
 # string can be modified
-string << ' Doe'
+name << ' Doe'
 puts "name: #{name}"

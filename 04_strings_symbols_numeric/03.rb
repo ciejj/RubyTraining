@@ -9,6 +9,7 @@ puts str1 + str2
 puts str1
 puts str1.object_id
 puts str1 += str2
+puts str1
 puts str1.object_id
 
 # a + b is actually an alias of .+ method call

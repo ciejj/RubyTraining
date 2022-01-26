@@ -13,7 +13,6 @@ puts string[-3]
 # second argument - length of the substring
 puts string[0, 3]
 puts string[-8, 4]
-puts string[-5, -4]
 
 # range can also be an argument
 puts string[0..2]
